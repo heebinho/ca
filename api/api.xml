@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="T:API.Controllers.JobsController">
+            <summary>
+            Jobs
+            </summary>
+        </member>
+        <member name="M:API.Controllers.JobsController.#ctor(API.Model.TnRContext)">
+            <summary>
+            ctor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:API.Controllers.JobsController.GetJobs">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.GetJob(System.Int32)">
+            <summary>
+            Get a job ressource
+            </summary>
+            <param name="id"></param>
+            <returns>Job ressource - 200</returns>
+            <remarks>Usually a job describes that files should be translated to the specified target language!</remarks>
+            <response code="200">Job created</response>
+            <response code="400">Job has missing/invalid values</response>
+            <response code="500">Oops! Can't create your Job right now</response>
+        </member>
+        <member name="M:API.Controllers.JobsController.PutJob(System.Int32,API.Model.Job)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="job"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.PostJob(API.Model.Job)">
+            <summary>
+            Post
+            </summary>
+            <param name="job"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.DeleteJob(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:API.Controllers.ProjectsController">
+            <summary>
+            Projects
+            </summary>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.#ctor(API.Model.TnRContext)">
+            <summary>
+            ctor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.GetProjects">
+            <summary>
+            Projects
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.GetProject(System.Int32)">
+            <summary>
+            Get
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.PutProject(System.Int32,API.Model.Project)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.PostProject(API.Model.Project)">
+            <summary>
+            Post
+            </summary>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.DeleteProject(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:API.Model.Job">
+            <summary>
+            Job Model
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Id">
+            <summary>
+            Identifier of the job
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Created">
+            <summary>
+            Creation date
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Modified">
+            <summary>
+            Modified date
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.SourceLanguage">
+            <summary>
+            Source language code (ISO-Standard: eg. DE)
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.TargetLanguage">
+            <summary>
+            Source language code (ISO-Standard: eg. EN)
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.ProjectId">
+            <summary>
+            Project id
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Project">
+            <summary>
+            Project Entity
+            </summary>
+        </member>
+        <member name="T:API.Model.Project">
+            <summary>
+            Project Model
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Id">
+            <summary>
+            Identifier of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Name">
+            <summary>
+            Name of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Description">
+            <summary>
+            Description of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Created">
+            <summary>
+            Creation date
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Modified">
+            <summary>
+            Modified date
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.StatusCode">
+            <summary>
+            Status code
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Jobs">
+            <summary>
+            Jobs
+            </summary>
+        </member>
+        <member name="T:API.Model.TnRContext">
+            <summary>
+            Translation and Revision Model
+            </summary>
+        </member>
+        <member name="M:API.Model.TnRContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{API.Model.TnRContext})">
+            <summary>
+            ctor
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:API.Model.TnRContext.Projects">
+            <summary>
+            Project set
+            </summary>
+        </member>
+        <member name="P:API.Model.TnRContext.Jobs">
+            <summary>
+            Jobs set
+            </summary>
+        </member>
+        <member name="T:API.SwaggerDefaultValues">
+            <summary>
+            Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
+            </summary>
+            <remarks>This <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> is only required due to bugs in the <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator"/>.
+            Once they are fixed and published, this class can be removed.</remarks>
+        </member>
+        <member name="M:API.SwaggerDefaultValues.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="T:CLS.Controllers.ValuesController">
+            <summary>
+            Values
+            </summary>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Get">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            Get
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            Post
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:CLS.Program">
+            <summary>
+            Prog
+            </summary>
+        </member>
+        <member name="M:CLS.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:CLS.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            CreateWebHostBuilder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

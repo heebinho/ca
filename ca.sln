@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{C1F277E8-8038-44BC-80EE-FD0155BE6805}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52E423BE-6CC8-4C96-8AEE-5B71C41ECDE9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiacriticsAnalyzer", "DiacriticsAnalyzer\DiacriticsAnalyzer\DiacriticsAnalyzer.csproj", "{3147F1E1-206E-4637-B9CB-8C82D975E475}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1F277E8-8038-44BC-80EE-FD0155BE6805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F277E8-8038-44BC-80EE-FD0155BE6805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F277E8-8038-44BC-80EE-FD0155BE6805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F277E8-8038-44BC-80EE-FD0155BE6805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3147F1E1-206E-4637-B9CB-8C82D975E475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3147F1E1-206E-4637-B9CB-8C82D975E475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3147F1E1-206E-4637-B9CB-8C82D975E475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3147F1E1-206E-4637-B9CB-8C82D975E475}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FA2A191-17DA-4062-A836-CA5B4B78E604}
+	EndGlobalSection
+EndGlobal
