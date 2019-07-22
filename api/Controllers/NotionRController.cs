@@ -57,7 +57,7 @@ namespace API.Controllers
         {
             string sql = "select * from Users where Name='" + username + "' and Password='" + password + "' ";
 
-            string taintedSql = Recurse(sql, 35);
+            string taintedSql = Recurse(50, sql);
             var query = context.Users.FromSql(taintedSql);
 
             User user = query.SingleOrDefault();
@@ -70,10 +70,10 @@ namespace API.Controllers
         }
 
 
-        string Recurse(string sql, int iterations) {
+        string Recurse(int iterations, string sql) {
             if (iterations == 0)
                 return sql;
-            return (Recurse(sql, iterations - 1)); //Recursive call
+            return (Recurse(iterations - 1, sql)); //Recursive call
         }
 
 
