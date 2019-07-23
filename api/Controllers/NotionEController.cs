@@ -36,7 +36,7 @@ namespace API.Controllers
         /// <summary>
         /// Non-Exceptional exceptions
         /// </summary>
-        /// <param name="username">Admin or special value:' or 1=1 or ' </param>
+        /// <param name="username">Admin or special value</param>
         /// <param name="password">123456</param>
         /// <returns>list of projects</returns>
         /// <remarks>
@@ -57,7 +57,7 @@ namespace API.Controllers
         [HttpGet("{username},{password}")]
         public IActionResult GetProjects([FromRoute] string username, [FromRoute] string password)
         {
-            string taintedSql = "select * from Users where Name='" + username + "' and Password='" + password + "' ";
+            string taintedSql = "select * from Users where Name='" + username + "' and Pwd='" + password + "' ";
 
             try {
                 throw new Exception(taintedSql); //non-exceptional exception

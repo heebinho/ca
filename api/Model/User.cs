@@ -25,7 +25,7 @@ namespace API.Model
         /// <summary>
         /// Name of the User
         /// </summary>
-        public string Password { get; set; }
+        public string Pwd { get; set; }
 
     }
 }

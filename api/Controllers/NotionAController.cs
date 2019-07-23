@@ -34,7 +34,7 @@ namespace API.Controllers
         /// <summary>
         /// Dynamic type approach
         /// </summary>
-        /// <param name="username">Admin or special value:' or 1=1 or ' </param>
+        /// <param name="username">Admin or special value</param>
         /// <param name="password">123456</param>
         /// <returns>list of projects</returns>
         /// <remarks>
@@ -61,7 +61,7 @@ namespace API.Controllers
         [HttpGet("{username},{password}")]
         public IActionResult GetProjects([FromRoute] string username, [FromRoute] string password)
         {
-            string sql = "select * from Users where Name='" + username + "' and Password='" + password + "' ";
+            string sql = "select * from Users where Name='" + username + "' and Pwd='" + password + "' ";
 
             //Create a dynamic type at runtime with a TaintedSQL property (string)
             TypeBuilder tb = GetTypeBuilder();

@@ -27,7 +27,7 @@ namespace API.Model
                 new User
                 {
                     Name = "Admin",
-                    Password = "123456"
+                    Pwd = "123456"
                 });
         }
 

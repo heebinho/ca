@@ -36,7 +36,7 @@ namespace API.Controllers
         /// <summary>
         /// Interprocedural approach 2 - Command Wrapper
         /// </summary>
-        /// <param name="username">Admin or special value:' or 1=1 or ' </param>
+        /// <param name="username">Admin or special value</param>
         /// <param name="password">123456</param>
         /// <returns>list of projects</returns>
         /// <remarks>
@@ -57,7 +57,7 @@ namespace API.Controllers
         [HttpGet("{username},{password}")]
         public IActionResult GetProjects([FromRoute] string username, [FromRoute] string password)
         {
-            string sql = "select * from Users where Name='{0}' and Password='{1}' ";
+            string sql = "select * from Users where Name='{0}' and asdf='{1}' ";
 
             var queryCommand = new QueryCommand(sql, username, password);
 
