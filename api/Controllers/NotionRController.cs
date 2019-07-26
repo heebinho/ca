@@ -14,7 +14,6 @@ namespace API.Controllers
     /// <summary>
     /// Projects
     /// </summary>
-    [ApiVersion("1.0")]
     [ApiVersion("6.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]

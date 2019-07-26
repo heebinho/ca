@@ -57,7 +57,7 @@ namespace API.Controllers
         [HttpGet("{username},{password}")]
         public IActionResult GetProjects([FromRoute] string username, [FromRoute] string password)
         {
-            string sql = "select * from Users where Name='{0}' and asdf='{1}' ";
+            string sql = "select * from Users where Name='{0}' and Pwd='{1}' ";
 
             var queryCommand = new QueryCommand(sql, username, password);
 
